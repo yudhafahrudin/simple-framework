@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/peringkatku/application/adminperingkatku/Myadmin.php</file>
-            <file>file:/C:/xampp/htdocs/peringkatku/application/adminperingkatku/controllers/res/code.php</file>
-            <file>file:/C:/xampp/htdocs/peringkatku/system/core/MY_hotaru.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/load/loader.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/load/config.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/index.php</file>
         </group>
     </open-files>
 </project-private>

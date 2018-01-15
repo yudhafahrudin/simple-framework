@@ -5,11 +5,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include './load/index.php';
+include './load/loader.php';
+include './vendor/autoload.php';
 
-$uri = isset($_REQUEST['uri']) ? $_REQUEST['uri'] : NULL;
-$uri1 = isset($_REQUEST['uri1']) ? $_REQUEST['uri1'] : NULL;
-$uri2 = isset($_REQUEST['uri2']) ? $_REQUEST['uri2'] : NULL;
+$uri = $_REQUEST['uri'] ?? NULL;
+$uri1 = $_REQUEST['uri1'] ?? NULL;
+$uri2 = $_REQUEST['uri2'] ?? NULL;
 
 if ($uri == NULL) {
     require APP . '/build/home.php';
@@ -24,5 +25,17 @@ if ($uri != NULL && $uri1 != NULL) {
     $deinition_function = $uri1;
 }
 
-$interface = '\\app\\build\\' . $uri;
-$interface::$deinition_function();
+
+\app\build\hello::index();
+
+//
+//$interface = '\\app\\build\\' . $uri;
+//$interface::$deinition_function();;
+
+//$db = new core\database();
+
+//$query = $db->db->from('data_pemetaan')->where('deleted <> ?', 1);
+//
+//foreach ($query as $row) {
+//    echo 'Hello, ' . $row['judul_pemetaan'] . ' ' . $row['deskripsi'] . '!';
+//}

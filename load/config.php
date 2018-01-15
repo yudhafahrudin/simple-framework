@@ -6,3 +6,20 @@
  * and open the template in the editor.
  */
 
+/*
+ * **********************************LOAD HELPER**********************************
+ * 
+ *  Set TRUE for load all helper
+ *  $load_config['app_helper'] = TRUE;
+ *  $load_config['core_helper'] = TRUE;
+ * 
+ *  Definition by name if you want load helper whic you want it
+ * $load_config['app_helper'] = ['name_helper','name_helper2'];
+ * $load_config['config_helper'] = ['name_helper','name_helper2'];
+ * 
+ */
+
+$load_config['app_helper'] = TRUE;
+$load_config['core_helper'] =TRUE;
+
+/***************************************************************************************

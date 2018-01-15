@@ -1,0 +1,5 @@
+{
+    "require": {
+        "envms/fluentpdo": "1.1.*"
+    }
+}

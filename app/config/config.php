@@ -6,11 +6,4 @@
  * and open the template in the editor.
  */
 
-namespace app\config;
-
-class config {
-
-    function __construct() {
-    }
-
-}
+$app_config['initial'] = '';

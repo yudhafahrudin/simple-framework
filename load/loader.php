@@ -11,7 +11,7 @@
 function loader_directory_files($path = '', $debug = FALSE) {
     foreach (glob($path . '{*.php}', GLOB_BRACE) as $files) {
         if ($debug) {
-            echo $files;die();
+            echo $files;
         } else {
             include $files;
         }
@@ -22,8 +22,14 @@ function loader_directory_files($path = '', $debug = FALSE) {
 loader_directory_files('core/');
 /* Initial Core Helper */
 loader_directory_files('core/helper/');
-/* Initial Config */
-loader_directory_files(APP . '/config/');
+
+/* Initial App Config */
+loader_directory_files( 'app/config/');
+/* Initial App Modal */
+loader_directory_files( 'app/modal/');
+
+
+
 
 
 

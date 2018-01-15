@@ -9,6 +9,7 @@
 namespace app\build;
 
 use core\basebuild as base_controller;
+use app\modal\hello;
 
 class hello extends base_controller {
 
@@ -17,10 +18,10 @@ class hello extends base_controller {
     }
 
     public static function index() {
-        
-        $data['nama'] = 'Yuda';
-        base_controller::view('hello', $data);
-        
+        $data = hello();
+        $data->getName();
+//        $data['nama'] = 'Yuda';
+//        base_controller::view('hello', $data);
     }
 
 }
