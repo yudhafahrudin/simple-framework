@@ -3,9 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/simple-framework/app/config/config.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/core/constant.php</file>
             <file>file:/C:/xampp/htdocs/simple-framework/load/loader.php</file>
             <file>file:/C:/xampp/htdocs/simple-framework/load/config.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/core/database.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/vendor/autoload.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/app/build/hello.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/composer.json</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/core/basebuild.php</file>
             <file>file:/C:/xampp/htdocs/simple-framework/index.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/app/config/database.php</file>
+            <file>file:/C:/xampp/htdocs/simple-framework/app/modal/hello.php</file>
         </group>
     </open-files>
 </project-private>

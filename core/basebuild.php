@@ -18,5 +18,4 @@ class basebuild {
         extract($path);
         include APP . '/view/' . $view . '.php';
     }
-
 }

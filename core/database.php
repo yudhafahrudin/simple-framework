@@ -13,22 +13,38 @@ use \FluentPDO;
 
 class database {
 
-    public $tesst = 'test';
-    public $db;
+    protected $tesst = 'test';
+    protected $database;
 
    function __construct() {
-        $pdo = new PDO("mysql:dbname=" . $GLOBALS['app_config_dbselect'], $GLOBALS['app_config_user'], $GLOBALS['app_config_password']);
+        $pdo = new PDO("mysql:dbname=" . $GLOBALS['app_config_database_select'], $GLOBALS['app_config_database_user'], $GLOBALS['app_config_database_password']);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         $pdo->setAttribute(PDO::ATTR_CASE, PDO::CASE_LOWER);
-        $this->db = new FluentPDO($pdo);
-    }
-
-    public static function test() {
-        echo database::$tesst;
-    }
-
-    public static function db() {
+        $this->database = new FluentPDO($pdo);
         return $this;
     }
 
 }
+
+//namespace core; 
+//use Illuminate\Database\Capsule\Manager as Capsule;
+// 
+//class Database {
+// 
+//    function __construct() {
+//    $capsule = new Capsule;
+//    $capsule->addConnection([
+//     'driver ' => $GLOBALS['app_config_database_driver'],
+//     'host ' => $GLOBALS['app_config_database_host'],
+//    'database '=> $GLOBALS['app_config_database_select'],
+//    'username ' => $GLOBALS['app_config_database_user'],
+//      'password '=> $GLOBALS['app_config_database_password'],
+//      'charset ' => 'utf8 ',
+//      'collation ' =>'utf8_unicode_ci',
+//      'prefix ' =>'',
+//    ]);
+//    // Setup the Eloquent ORM… 
+//    $capsule->bootEloquent();
+//}
+ 
+

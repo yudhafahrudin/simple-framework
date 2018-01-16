@@ -8,7 +8,6 @@
 namespace app\modal;
 
 use core\database;
-        
 
 class hello extends database {
     
@@ -17,7 +16,7 @@ class hello extends database {
     }
     
     public function getName() {
-        $query = $db->db->from('data_pemetaan')->where('deleted <> ?', 1);
+        $query = $this->database->from('data_pemetaan')->where('deleted <> ?', 1);
         foreach ($query as $row) {
         }
         return $row;

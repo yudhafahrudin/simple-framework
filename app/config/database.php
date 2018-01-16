@@ -8,9 +8,11 @@
 
 
 //$GLOBALS['app_config_db_env'] = '';
-$GLOBALS['app_config_user'] = 'root';
-$GLOBALS['app_config_password'] = '';
-$GLOBALS['app_config_dbselect'] = 'sig_bencana';
+$GLOBALS['app_config_database_driver'] = 'mysql';
+$GLOBALS['app_config_database_host'] = '127.0.0.1';
+$GLOBALS['app_config_database_user'] = 'root';
+$GLOBALS['app_config_database_password'] = '';
+$GLOBALS['app_config_database_select'] = 'sig_bencana';
 
 
 

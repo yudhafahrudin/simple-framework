@@ -1,5 +1,14 @@
 {
     "require": {
-        "envms/fluentpdo": "1.1.*"
+        "envms/fluentpdo": "1.1.*",
+        "nikic/fast-route": "^1.2",
+		"illuminate/database": "5.1.8"		
+    },
+	 "autoload": 
+    {"psr-4": 
+        { "Controllers\\": "app/build/",
+            "Models\\": "app/model/"
+             
+                 }
     }
 }

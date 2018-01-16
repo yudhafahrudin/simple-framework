@@ -8,20 +8,21 @@
 
 namespace app\build;
 
-use core\basebuild as base_controller;
-use app\modal\hello;
+use core\basebuild;
+use app\modal\hello as hello_modal;
 
-class hello extends base_controller {
+class hello extends basebuild {
 
+    private $hello_modal;
+    
     function __construct() {
         parent::__construct();
+        $this->hello_modal = new hello_modal();
     }
 
-    public static function index() {
-        $data = hello();
-        $data->getName();
-//        $data['nama'] = 'Yuda';
-//        base_controller::view('hello', $data);
+    public function index() {
+        $get_name = $this->hello_modal->getName();
+        basebuild::view('hello', $get_name);
     }
 
 }

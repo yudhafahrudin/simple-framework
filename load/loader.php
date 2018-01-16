@@ -6,10 +6,9 @@
  * and open the template in the editor.
  */
 
-/* Reader Folder */
-
 function loader_directory_files($path = '', $debug = FALSE) {
-    foreach (glob($path . '{*.php}', GLOB_BRACE) as $files) {
+    $array_path = glob($path . '{*.php}', GLOB_BRACE);
+    foreach ($array_path as $files) {
         if ($debug) {
             echo $files;
         } else {
@@ -22,11 +21,11 @@ function loader_directory_files($path = '', $debug = FALSE) {
 loader_directory_files('core/');
 /* Initial Core Helper */
 loader_directory_files('core/helper/');
-
 /* Initial App Config */
-loader_directory_files( 'app/config/');
+loader_directory_files('app/config/');
 /* Initial App Modal */
-loader_directory_files( 'app/modal/');
+loader_directory_files('app/modal/');
+
 
 
 

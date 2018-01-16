@@ -7,4 +7,5 @@
  */
 ?>
 
-<h2>Hello Word <?=$nama?></h2>
+<h2> <?=$judul_pemetaan?></h2>
+<p> <?=$deskripsi?></p>
