@@ -1,14 +1,15 @@
 {
     "require": {
+        "php": ">=5.2.4",
         "envms/fluentpdo": "1.1.*",
         "nikic/fast-route": "^1.2",
-		"illuminate/database": "5.1.8"		
+        "illuminate/database": "5.1.8",
+        "phroute/phroute" : "2.0.*",
+        "vlucas/phpdotenv" : "2.4.0"
     },
-	 "autoload": 
-    {"psr-4": 
-        { "Controllers\\": "app/build/",
-            "Models\\": "app/model/"
-             
-                 }
+   "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
     }
 }

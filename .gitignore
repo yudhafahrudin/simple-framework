@@ -1,0 +1,6 @@
+.env
+/app/builds/*.php
+/app/models/*.php
+/app/views/*.php
+nbproject/
+vendor/

@@ -1,42 +1,37 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * SIMPLE SKELETON WITH PHP 7
+ * 
  */
 
+// Definition Constants
 define('VERSION', '1.0.2.10');
 define('VERSION_DATE', '14-01-2018');
+define('ROOT', dirname(__DIR__));
+define('SELF_FILE', pathinfo(__FILE__, PATHINFO_BASENAME));
+define('BASENAME_DIR', basename(__DIR__));
+define('LOCATION_DIR', __DIR__);
+define('APP_INTERFACE', '\\app\\builds\\');
 define('APP', 'app');
+define('CORE_DIR', 'cores');
 
-include './load/loader.php';
+// Actual Link
+$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+// Load All Vendor
 include './vendor/autoload.php';
-//
-////INIT DATABASE
-//use core\Database;
-//new Database();
+// Load Middlewere System
+include './load/middleware.php';
+// Load App System
+include './load/loader.php';
 
-$uri = $_REQUEST['uri'] ?? NULL;
-$uri1 = $_REQUEST['uri1'] ?? NULL;
-$uri2 = $_REQUEST['uri2'] ?? NULL;
+// Check valid folder
+check_folder(array(CORE_DIR, APP));
 
-if ($uri == NULL) {
-    include APP . '/build/home.php';
-}
+// Fetch method and URI from somewhere
+$httpMethod = $_SERVER['REQUEST_METHOD'];
+$uri = $_SERVER['REQUEST_URI'];
 
-if ($uri != NULL) {
-    include APP . '/build/' . $uri . '.php';
-    $deinition_function = 'index';
-}
-
-if ($uri != NULL && $uri1 != NULL) {
-    include APP . '/build/' . $uri . '/' . $uri1 . ' . php';
-    $deinition_function = $uri1;
-}
-
-$interface =  '\\app\\build\\' . $uri;
-$interface = new $interface();
-$interface->$deinition_function();
-
-//dumy($httpMethod);
+routes($httpMethod, $uri);

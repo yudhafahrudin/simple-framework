@@ -19,7 +19,8 @@
  * 
  */
 
-$load_config['app_helper'] = TRUE;
-$load_config['core_helper'] =TRUE;
+const LOAD_CONFIG_APP_HELPER = TRUE;
+const LOAD_CONFIG_CORE_HELPER = TRUE;
+const LOAD_CONFIG_TEST = 'TRUE';
 
-/***************************************************************************************
+
