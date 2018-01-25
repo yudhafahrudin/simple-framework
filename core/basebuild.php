@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace cores;
+namespace core;
 
 class basebuild {
 
@@ -14,9 +14,9 @@ class basebuild {
         
     }
 
-    public static function view($view = NULL, $path = NULL) {
-        if (!$path == NULL) {
-            extract($path);
+    public static function view($view = NULL, $variable = NULL) {
+        if (!$variable == NULL) {
+            extract($variable);
         }
         include APP . '/views/' . $view . '.php';   
     }

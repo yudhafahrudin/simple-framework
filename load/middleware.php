@@ -7,5 +7,5 @@
  */
 
 // Instance ENVIRONMENT
-$dotenv = new Dotenv\Dotenv(LOCATION_DIR);
+$dotenv = new Dotenv\Dotenv(ROOT);
 $dotenv->load();

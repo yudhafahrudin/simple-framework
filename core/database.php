@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace cores;
+namespace core;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 

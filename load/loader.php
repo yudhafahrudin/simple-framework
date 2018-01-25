@@ -28,14 +28,17 @@ function loader_directory_files($path = '', $all_folder = TRUE, $debug = FALSE) 
 loader_directory_files('app/configs/'); 
 
 /* Initial Core */
-loader_directory_files('cores/');
+loader_directory_files('core/');
 /* Initial Core Helper */
-loader_directory_files('cores/helper/');
+loader_directory_files('core/helper/');
 
+/* Initial App Routes */
+loader_directory_files('app/routes/');
 /* Initial App Modal */
 loader_directory_files('app/models/');
 /* Initial App Builds */
 loader_directory_files('app/builds/');
+
 
 
 
